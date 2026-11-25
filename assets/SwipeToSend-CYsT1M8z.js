@@ -1,0 +1,21 @@
+import{r as a,u as O,a as q,b as v,j as t,m as p,d as x}from"./motion-C5WnBotO.js";import{c as f}from"./index-CgwycLQe.js";/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const H=f("Check",[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]]);/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const $=f("ChevronsRight",[["path",{d:"m6 17 5-5-5-5",key:"xnjwq"}],["path",{d:"m13 17 5-5-5-5",key:"17xmmf"}]]);/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const F=f("Loader2",[["path",{d:"M21 12a9 9 0 1 1-6.219-8.56",key:"13zald"}]]);/**
+ * @license lucide-react v0.344.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const G=f("Send",[["path",{d:"m22 2-7 20-4-9-9-4Z",key:"1q3vgg"}],["path",{d:"M22 2 11 13",key:"nzbqef"}]]),i=48,d=4,P=.82;function K({onConfirm:N,disabled:n=!1,label:R="Geser untuk mengirim",disabledLabel:S="Tunggu sebentar…",sendingLabel:b="Mengirim…",doneLabel:w="Terkirim!",ariaLabel:E="Kirim"}){const y=a.useRef(null),g=a.useRef(!1),c=a.useRef(!0),[o,M]=a.useState(220),[e,m]=a.useState("idle"),u=O(),r=q(0),T=v(r,s=>s+i+d*2),C=v(r,[0,o*.45],[1,0]);a.useEffect(()=>(c.current=!0,()=>{c.current=!1}),[]),a.useEffect(()=>{const s=y.current;if(!s||!("ResizeObserver"in window))return;const l=new ResizeObserver(([L])=>M(Math.max(60,L.contentRect.width-i-d*2)));return l.observe(s),()=>l.disconnect()},[]);const k=()=>x(r,0,u?{duration:0}:{type:"spring",stiffness:320,damping:30}),j=async()=>{if(e!=="idle"||n)return;m("sending"),x(r,o,{duration:u?0:.15});let s=!1;try{s=await N()}catch{s=!1}c.current&&(s&&(m("done"),await new Promise(l=>setTimeout(l,1600)),!c.current)||(m("idle"),k()))},A=()=>{r.get()>=o*P?j():k(),setTimeout(()=>{g.current=!1},60)},D=s=>{if(!g.current){if(s.detail===0)return j();e==="idle"&&!n&&x(r,[0,o*.22,0],{duration:u?0:.7})}},h=e!=="idle",z=n?S:e==="sending"?b:e==="done"?w:R;return t.jsxs("div",{className:"swipe-send",children:[t.jsxs("div",{ref:y,className:`swipe-send-track relative overflow-hidden rounded-full select-none border ${e==="done"?"border-teal-400":"border-teal-500/30"} ${n?"opacity-60":""}`,style:{height:i+d*2,background:"linear-gradient(180deg, rgba(15,23,42,.9), rgba(8,12,28,.95))",boxShadow:n?"none":"0 0 18px rgba(96,165,250,.2), inset 0 1px 0 rgba(255,255,255,.05)"},children:[t.jsx(p.div,{"aria-hidden":"true",className:"swipe-send-progress absolute inset-y-0 left-0 rounded-full",style:{width:e==="idle"?T:"100%",background:"linear-gradient(90deg, rgba(96,165,250,.16), rgba(96,165,250,.42))"}}),t.jsxs(p.span,{"aria-hidden":"true",style:{opacity:e==="idle"?C:1,paddingLeft:i},className:"swipe-send-text absolute inset-0 flex items-center justify-center gap-2 text-sm font-medium text-slate-200 pointer-events-none",children:[z,e==="idle"&&!n&&t.jsx($,{className:"w-4 h-4 text-teal-400 swipe-nudge","aria-hidden":"true"})]}),t.jsxs(p.button,{type:"button",disabled:h||n,"aria-label":`${E}. Geser ke kanan, atau tekan Enter.`,drag:h||n?!1:"x",dragConstraints:{left:0,right:o},dragElastic:0,dragMomentum:!1,onDragStart:()=>{g.current=!0},onDragEnd:A,onClick:D,style:{x:r,width:i,height:i,top:d,left:d,touchAction:"pan-y"},className:"swipe-send-handle absolute z-10 rounded-full flex items-center justify-center text-[#05091A] cursor-grab active:cursor-grabbing disabled:cursor-default",whileTap:u||h?void 0:{scale:.95},children:[t.jsx("span",{className:"swipe-send-handle-bg absolute inset-0 rounded-full",style:{background:"linear-gradient(135deg, #93C5FD, #60A5FA)",boxShadow:"0 0 18px rgba(96,165,250,.65)"}}),t.jsx("span",{className:"relative",children:e==="sending"?t.jsx(F,{className:"w-5 h-5 animate-spin","aria-hidden":"true"}):e==="done"?t.jsx(H,{className:"w-5 h-5","aria-hidden":"true"}):t.jsx(G,{className:"w-5 h-5","aria-hidden":"true"})})]})]}),t.jsx("p",{className:"sr-only",role:"status",children:e==="sending"?b:e==="done"?w:""})]})}export{K as S};
