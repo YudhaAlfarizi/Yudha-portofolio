@@ -1,4 +1,4 @@
-import{r as u,j as e,m as h,A as N}from"./motion-C5WnBotO.js";import{S as y}from"./SwipeToSend-B_7-xF-I.js";import{c as w,M as f,G as A,P as l,a as C,L as I,b as $,I as L,C as E}from"./index-BGrF0-bB.js";import"./react-DwL44DyY.js";/**
+import{r as u,j as e,m as h,A as N}from"./motion-C5WnBotO.js";import{S as y}from"./SwipeToSend-BGoE9voj.js";import{c as w,M as f,G as A,P as l,a as C,L as I,b as $,I as L,C as E}from"./index-hV4AzJrg.js";import"./react-DwL44DyY.js";/**
  * @license lucide-react v0.344.0 - ISC
  *
  * This source code is licensed under the ISC license.
